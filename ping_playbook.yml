@@ -4,4 +4,3 @@
   tasks:
     - name: Ping the hosts
       ansible.builtin.ping:
-        cmd: uname -a
