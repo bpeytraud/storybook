@@ -15,7 +15,8 @@
 
 ### Création de groupes et de users
 
-* Création d'un script python
+* Utiliser l'inventaire présent dans `` enalean-infrastructure.git/roles/enalean_users_sysadmin/tasks/ ``
+* Ajouter les groupes via `` enalean-infrastructure.git/inventory/group_vars/all/ `
 
 # Les prérequis d'un template
 
@@ -23,3 +24,7 @@
 * Playbook filename
 * Un inventaire
 * Une clé SSH
+
+# Connection Okta
+
+Toutes les informations sont disponibles à ``enalean-infrastructure.git/roles/enalean_monitoring/templates/etc/grafana/grafana.ini.j2``
