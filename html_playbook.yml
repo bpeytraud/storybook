@@ -1,0 +1,17 @@
+- name: Deploy simple HTML page
+  hosts: webservers
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Copy index.html to webserver
+      copy:
+        src: index.html
+        dest: /data/semaphore/index.html
+
+    - name: Start Nginx
+      service:
+        name: nginx
+        state: started
