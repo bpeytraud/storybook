@@ -1,5 +1,6 @@
 - name: Deploy simple HTML page
   hosts: webservers
+  become: yes
   tasks:
     - name: Install Nginx
       apt:
