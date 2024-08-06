@@ -15,3 +15,29 @@
       service:
         name: nginx
         state: started
+        
+    # Tasks to manage groups
+    - name: Ensure the 'developers' group exists
+      group:
+        name: developers
+        state: present
+
+    - name: Ensure the 'ops' group exists
+      group:
+        name: ops
+        state: present
+
+    # Tasks to manage users
+    - name: Ensure the user 'alice' exists
+      user:
+        name: alice
+        groups: developers
+        state: present
+        create_home: yes
+
+    - name: Ensure the user 'bob' exists
+      user:
+        name: bob
+        groups: ops
+        state: present
+        create_home: yes
